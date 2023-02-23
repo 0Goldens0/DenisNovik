@@ -1,0 +1,126 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Denis Novik
+  body 
+    header.header.header__container
+      .container 
+        nav.header__nav
+          .header__nav-item
+            a.header__nav-link.active(href="#") Home
+          .header__nav-item
+            a.header__nav-link(href="#about") About me
+          .header__nav-item
+            a.header__nav-link(href="#skills") Skills
+          .header__nav-item
+            a.header__nav-link(href="#portfolio") Portfolio
+          .header__nav-item
+            a.header__nav-link(href="#contacts") Contacts
+          .hero__lang-btns
+              button.hero__lang-btn.active-btn ENG
+              span |
+              button.hero__lang-btn RU
+    main 
+      section.hero(id="hero") 
+        .container
+          .burger
+            span 
+            span 
+            span 
+          .hero__content 
+            h1.hero__title Denis Novik
+            p.hero__description UX | UI designer <br> 24 years old, Minsk
+            .hero__lang-btns
+              button.hero__lang-btn.active-btn ENG
+              span |
+              button.hero__lang-btn RU
+          picture 
+            source(media="(min-width: 426px)", srcset=require('./img/hero-full.png'))
+            img.hero__img(src=require('./img/hero-mob.png'), alt="Denis Photo")
+      
+      section.about(id="about")  
+        .container 
+          h2.title About me
+          p.about__description Hi, I'm Denis – UX/UI designer from Minsk. <br> I'm interested in design and everything connected with it.
+          p.about__description I'm studying at courses "Web and mobile design <br> interfaces" in IT-Academy.
+          p.about__description Ready to implement excellent projects <br> with wonderful people.
+      
+      section.skills(id="skills")  
+        .container
+          h2.title Skills
+          p.skills__description I work in such programs as
+          .skills__cards 
+            .skills__card
+              include /img/skills-PS.svg
+              p.skills__card-description Adobe Photoshop
+              .skills__card-rating
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+            .skills__card
+              include /img/skills-Ai.svg
+              p.skills__card-description Adobe Illustrator
+              .skills__card-rating
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+            .skills__card
+              include /img/skills-Ae.svg
+              p.skills__card-description Adobe After Effects
+              .skills__card-rating 
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+            .skills__card
+              include /img/skills-Figma.svg
+              p.skills__card-description Figma
+              .skills__card-rating
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+                include /img/star.svg
+      
+      section.portfolio(id="portfolio") 
+        .container
+          h2.title Portfolio
+          .portfolio__card
+            picture 
+            source(media="(min-width: 426px)", srcset=require('./img/portfolio-1-mob.png'))
+            img.portfolio__img(src=require('./img/portfolio-1.png'), alt="Online fashion store - Homepage")
+            a.portfolio__link(href="#") Online fashion store - Homepage
+          .portfolio__card
+            picture 
+            source(media="(min-width: 426px)", srcset=require('./img/portfolio-2-mob.png'))
+            img.portfolio__img(src=require('./img/portfolio-2.png'), alt="Reebok Store - Concept")
+            a.portfolio__link(href="#") Reebok Store - Concept
+          .portfolio__card
+            picture 
+            source(media="(min-width: 426px)", srcset=require('./img/portfolio-3-mob.png'))
+            img.portfolio__img(src=require('./img/portfolio-3.png'), alt="Braun Landing Page - Concept")
+            a.portfolio__link(href="#") Braun Landing Page - Concept
+
+      section.contacts(id="contacts") 
+        .container 
+          h2.title Contacts
+          p.contacts__description Want to know more or just chat? <br> You are welcome!
+          button.contacts__btn Send message
+          .contacts__links 
+            a.contacts__link(href="#")  
+              include /img/contacts-in.svg
+            a.contacts__link(href="#")  
+              include /img/contacts-inst.svg
+            a.contacts__link(href="#")  
+              include /img/contacts-be.svg
+            a.contacts__link(href="#")  
+              include /img/contacts-ball.svg
+          p.contacts__description.contacts__description-low Like me on <br> LinkedIn, Instagram, Behance, Dribble
